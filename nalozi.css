@@ -1,0 +1,126 @@
+  /* ====================================================================================================
+
+  REGISTRACIJA
+
+  ========================================================================================================= */
+
+.forma-kontejner {
+    padding: 50px;
+    width: 300px;
+    border: solid 1px #25242b;
+}
+
+
+.forma-grupa {
+    margin-bottom: 1em;
+}
+
+.forma-grupa label {
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 0.5em;
+    color: #666;
+}
+
+.forma-grupa input[type="text"],
+.forma-grupa input[type="email"],
+.forma-grupa input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.forma-grupa input[type="submit"] {
+    background-color: #25242b;
+    color: #f5efd7;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1em;
+    width: 100%;
+}
+
+.forma-grupa input[type="submit"]:hover {
+    background-color: #898578;
+    color: #25242b;
+}
+
+
+.gazda-kontejner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+
+  /* ====================================================================================================
+
+  NALOG STRANICA
+
+  ========================================================================================================= */
+
+  .nalog-sekcija {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    border: solid 1px #25242b;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.korisnik-info, .profilna-slika {
+    flex: 1;
+    padding: 20px;
+}
+
+.korisnik-info h2, .profilna-slika h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.info-predmet {
+    margin-bottom: 20px;
+}
+
+.info-predmet label {
+    display: block;
+    font-weight: bold;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.info-predmet span {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.promeni-dugme {
+    background-color: #25242b;
+    color: #f5efd7;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.promeni-dugme:hover {
+    background-color: #898578;
+    color: #25242b;
+}
+
+.slicica-nalog-stranica {
+    width: 45%;
+    height: auto;
+    align-items: right;
+    justify-content: right;
+    padding-left: 40%;
+}
