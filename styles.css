@@ -119,17 +119,17 @@ body {
       top: calc(100% + 5px);
       right: 0;
       background-color: #25242b;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
       z-index: 1000;
       text-align: left;
+      transition: opacity 0.3s ease-out, max-height 0.3s ease-out;
+      max-height: 0;
+      overflow: hidden;
   }
   
   .account-dropdown:hover .dropdown-menu {
       display: block;
-  }
-  
-  .account-dropdown:focus-within .dropdown-menu {
-      display: block;
+      max-height: 200px;
+      opacity: 1;
   }
   
   .dropdown-menu li {
@@ -154,6 +154,10 @@ body {
       vertical-align: middle;
       pointer-events: none;
   }
+  
+  
+  
+  
  
     
 /*
@@ -647,6 +651,75 @@ li {
 .tilt-desno {
     transform: rotate(5deg);
 }
+
+/* --- Filter pretraga --- */
+
+.filter-kontejner {
+  margin-left: 35%;
+  margin-bottom: 5%;
+  padding: 10px;
+  background-color: #f5efd7;
+  border: 1px solid #25242b;
+  border-radius: 8px;
+  max-width: 300px;
+}
+
+.filter-grupa {
+  margin-bottom: 10px;
+}
+
+.filter-grupa label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.filter-grupa select,
+.filter-grupa button {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+.filter-grupa button {
+  background-color: #25242b;
+  color: #f5efd7;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.filter-grupa button:hover {
+  background-color: #898578;
+}
+
+.unos-cene {
+  display: flex;
+  align-items: center;
+}
+
+.unos-cene input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+.unos-cene span {
+  margin-left: 5px;
+  font-size: 1em;
+}
+
+
+
+
+
+
+
 
 
 
