@@ -654,65 +654,36 @@ li {
 
 /* --- Filter pretraga --- */
 
-.filter-kontejner {
-  margin-left: 35%;
-  margin-bottom: 5%;
-  padding: 10px;
-  background-color: #f5efd7;
-  border: 1px solid #25242b;
-  border-radius: 8px;
-  max-width: 300px;
+
+.search-container {
+  display: inline-block;
+  border: 2px solid black;
+  padding: 5px;
+
 }
 
-.filter-grupa {
-  margin-bottom: 10px;
+#searchInput {
+  padding: 5px;
+  border: none;
+  width: 350px; /* Adjust width as needed */
 }
 
-.filter-grupa label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-.filter-grupa select,
-.filter-grupa button {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 1em;
-  box-sizing: border-box;
-}
-
-.filter-grupa button {
+.search-container button {
+  padding: 5px 10px;
   background-color: #25242b;
   color: #f5efd7;
+  border: none;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
-.filter-grupa button:hover {
-  background-color: #898578;
+.filter-container {
+  margin-top: 10px;
 }
 
-.unos-cene {
-  display: flex;
-  align-items: center;
+.filter-container label {
+  margin-right: 20px;
 }
 
-.unos-cene input {
-  flex: 1;
-  padding: 8px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 1em;
-  box-sizing: border-box;
-}
-
-.unos-cene span {
-  margin-left: 5px;
-  font-size: 1em;
-}
 
 
 

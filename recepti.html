@@ -31,11 +31,11 @@
               <ul>
                   <li><a href="index.html">POČETNA</a></li>
                   <li><a href="recepti.html">RECEPTI</a></li>
-                  <li><a href="kontakt.html">INFO</a></li>
+                  <li><a href="kontakt.php">INFO</a></li>
                   <li class="account-dropdown">
                       <a href="#" class="account-toggle"><img src="slike/nalog.svg" alt="Dropdown za nalog" class="account-icon"></a>
                       <ul class="dropdown-menu">
-                          <li><a href="kreiraj-nalog.html">Kreiraj nalog</a></li>
+                          <li><a href="kreiraj-nalog.php">Kreiraj nalog</a></li>
                           <!-- Add more account-related options as needed -->
                       </ul>
                   </li>
@@ -43,67 +43,38 @@
           </nav>
       </section>
       
+<!-- Pretraga recepata -->
 
-
-      <!-- Filter pretraga za recepte-->
-      <h2 style="text-align: left; margin-left: 15%;">Filter pretraga</h2>
+      <h2 style="text-align: left; margin-left: 15%;">Pretraga Recepata</h2>
       <br><br>
       <hr class="separator">
       <br><br>
-      
-      <div class="filter-kontejner">
-        <form id="filter-form">
-            <div class="filter-grupa">
-                <label for="category-dropdown">Kategorija:</label>
-                <select id="category-dropdown" name="category">
-                    <option value="">Sve</option>
-                    <option value="Meso">Meso</option>
-                    <option value="Dezerti">Dezerti</option>
-                    <option value="Pasta">Pasta</option>
-                    <option value="Testo">Testo</option>
-                    <option value="Piće">Piće</option>
-                    <option value="Riba i Morski Plodovi">Riba i Morski Plodovi</option>
-                    <option value="Voće i Povrće">Voće i Povrće</option>
-                    <option value="Grickalice">Grickalice</option>
-                    <option value="Sosevi">Sosevi</option>
-                </select>
-            </div>
-            <div class="filter-grupa">
-                <label for="price-from">Cena od:</label>
-                <div class="unos-cene">
-                    <input type="number" id="price-from" name="price-from" min="0" placeholder="0">
-                    <span> din</span>
-                </div>
-            </div>
-            <div class="filter-grupa">
-                <label for="price-to">Cena do:</label>
-                <div class="unos-cene">
-                    <input type="number" id="price-to" name="price-to" min="0" placeholder="Pare nisu problem">
-                    <span> din</span>
-                </div>
-            </div>
-            <div class="filter-grupa">
-                <label for="diet">Dijetska Ograničenja:</label>
-                <select id="diet" name="diet">
-                    <option value="">Sve</option>
-                    <option value="vegan">Vegan</option>
-                    <option value="vegetarian">Vegetarijansko</option>
-                </select>
-            </div>
-            <div class="filter-grupa">
-                <button type="submit">Pretraga</button>
-            </div>
-        </form>
-    </div>
-    
-      
-      
 
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Pretraži recepte...">
+        <button type="submit" onclick="searchRecipes()">Pretraga</button>
+      </div>
       
+      <div class="filter-container">
+        <label for="veganCheckbox">
+          <input type="radio" id="veganCheckbox" name="dietType"> Vegan
+        </label>
+        <label for="vegetarianCheckbox">
+          <input type="radio" id="vegetarianCheckbox" name="dietType"> Vegeterijanac
+        </label>
+        <label for="mesojedCheckbox">
+          <input type="radio" id="mesojedCheckbox" name="dietType" checked> Mesojed
+        </label>
+      </div>
 
-    <hr class="separator">
-       <!-- Galerija recepata -->
+      <div id="searchResults"></div>
 
+
+      <br><br><br><br>
+
+
+<!-- Galerija recepata -->
+  
 <div class="galerija">
   <a href="link-to-meso-category.html" class="galerija-slika mala tilt-levo">
     <img src="slike/mesoKategorija.webp" alt="Meso">
@@ -163,7 +134,7 @@
             <div class="footer-linkovi">
               <a href="index.html">POČETNA</a>
               <a href="recepti.html">RECEPTI</a>
-              <a href="kontakt.html">INFO</a>
+              <a href="kontakt.php">INFO</a>
             </div>
           </div>
           <div class="footer-info">

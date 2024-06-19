@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +8,6 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="nalozi.css">
     <link rel="icon" href="slike/ikonica.ico" type="image/x-icon">
-    
 </head>
 <body>
 
@@ -21,7 +21,7 @@
     </div>
   
 <header>
-    <h1>Uloguj se, listaj dole. 📝</h1>
+    <h1>Kreacija Naloga, listaj dole 📝</h1>
 </header>
 
 <main>
@@ -46,22 +46,26 @@
     </section>
 
     <div class="gazda-kontejner">
-        <div class="forma-kontejner">
-            <form action="#" method="POST">
-                <div class="forma-grupa">
-                    <label for="username">Korisničko ime:</label>
-                    <input type="text" id="username" name="username" required>
-                </div>
-                <div class="forma-grupa">
-                    <label for="password">Lozinka:</label>
-                    <input type="password" id="password" name="password" required>
-                </div>
-                <div class="forma-grupa">
-                    <input type="submit" value="Uloguj se">
-                </div>
-            </form>
-        </div>
+    <div class="forma-kontejner">
+        <form action="registracija.php" method="POST" class="forma">
+            <div class="forma-grupa">
+                <label for="username">Korisnicko ime:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="forma-grupa">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="forma-grupa">
+                <label for="lozinka">Lozinka:</label>
+                <input type="password" id="lozinka" name="lozinka" required>
+            </div>
+            <div class="forma-grupa">
+                <input type="submit" value="Registruj Se!">
+            </div>
+        </form>
     </div>
+</div>
 
 
 </main>
@@ -87,7 +91,6 @@
         <small>EMAIL: mimamirkop@gmail.com</small>
         <a href="https://www.instagram.com/nikonigde21/"><small>Instagram</small></a>
       </div>
-      <div align="right"><img src="slike/logo.png"></div>
     </div>
   </footer>
   

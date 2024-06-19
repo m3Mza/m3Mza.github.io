@@ -88,6 +88,90 @@ function prikaziSlajd(n) {
 }
 
 
+// Alert za poruke na email formi
+
+
+document.getElementById('kontakt-forma').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent the form from submitting normally
+  
+  // Perform form validation if needed (e.g., check if fields are filled properly)
+  // You can add validation logic here
+  
+  // Submit the form using fetch API
+  fetch('slanje_poruke.php', {
+      method: 'POST',
+      body: new FormData(document.getElementById('kontakt-forma'))
+  })
+  .then(response => {
+      if (response.ok) {
+          alert('Poruka je uspješno poslana!');
+          document.getElementById('kontakt-forma').reset(); // Reset the form
+      } else {
+          alert('Došlo je do greške prilikom slanja poruke. Molimo pokušajte ponovo.');
+      }
+  })
+  .catch(error => {
+      console.error('Greška:', error);
+      alert('Došlo je do greške prilikom slanja poruke. Molimo pokušajte ponovo.');
+  });
+});
+
+
+
+
+// Pretraga recepata
+
+function searchRecipes() {
+  const searchInput = document.getElementById('searchInput').value.toLowerCase();
+  const dietType = document.querySelector('input[name="dietType"]:checked').value;
+
+  const xhr = new XMLHttpRequest();
+  xhr.open("GET", `pretraga-recepata.php?searchInput=${encodeURIComponent(searchInput)}&dietType=${encodeURIComponent(dietType)}`, true);
+  xhr.onload = function() {
+      if (xhr.status === 200) {
+          const results = JSON.parse(xhr.responseText);
+          displayResults(results);
+      } else {
+          console.error('Zahtev neuspesan. Status:', xhr.status);
+          displayError();
+      }
+  };
+  xhr.onerror = function() {
+      console.error('Zahtev neuspesan. Greska mreze');
+      displayError();
+  };
+  xhr.send();
+}
+
+function displayResults(results) {
+  const resultsContainer = document.getElementById('searchResults');
+  resultsContainer.innerHTML = '';
+
+  if (results.length === 0) {
+      resultsContainer.innerHTML = '<p>Nismo pronašli recepte</p>';
+      return;
+  }
+
+  results.forEach(result => {
+      const resultItem = document.createElement('div');
+      resultItem.classList.add('result-item');
+      resultItem.innerHTML = `<a href="${result.link}" target="_blank">${result.titl}</a>`;
+      resultsContainer.appendChild(resultItem);
+  });
+}
+
+function displayError() {
+  const resultsContainer = document.getElementById('searchResults');
+  resultsContainer.innerHTML = '<p>Došlo je do greške prilikom pretrage. Molimo pokušajte ponovo kasnije.</p>';
+}
+
+
+
+
+
+
+
+
 
 
 
