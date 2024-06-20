@@ -43,6 +43,9 @@ if ($stmt->execute()) {
         $recipes[] = $row;
     }
 
+    // For debugging: log the recipes
+    error_log(print_r($recipes, true));
+
     echo json_encode($recipes);
 } else {
     // Handle query execution error
